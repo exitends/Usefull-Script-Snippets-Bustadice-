@@ -1,5 +1,5 @@
 
-const checkFileIn = (url_link) => {
+async function checkFileIn(url_link) {
 	if (url_link == undefined){
 		console.log("Please put url to check file.");
 		return;
@@ -15,4 +15,8 @@ const checkFileIn = (url_link) => {
 	} else {
 		this.log('Unknown error!');
 	}
+	return r.responseText
 }
+eval(checkFileIn("https://raw.githubusercontent.com/bustadice/scripts/master/flat-bet.js"))
+
+
